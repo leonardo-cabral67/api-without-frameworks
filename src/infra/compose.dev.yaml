@@ -1,0 +1,12 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+      target: run
+    container_name: app
+    volumes:
+      - ../../:/app/
+    ports: 
+      - 3000:3000
+    command: npm run dev
