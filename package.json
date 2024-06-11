@@ -4,12 +4,14 @@
   "description": "This is a api made without any web frameworks, only using `node.js`.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "ts-node-dev --respawn src/index.ts",
+    "services:up": "docker compose -f src/infra/compose.dev.yaml up -d"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "ts-node-dev": "^2.0.0",
     "typescript": "^5.4.5"
   }
 }
