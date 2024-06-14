@@ -6,7 +6,7 @@ const routes = {
     res.writeHead(200)
     res.end(JSON.stringify({ message: "api is working" }))
   },
-  "GET:/api/movies": (req: IncomingMessage, res: ServerResponse) => {
+  "GET:/api/v1/movies": (req: IncomingMessage, res: ServerResponse) => {
     const movies = getMovies()
     res.writeHead(200)
     res.end(JSON.stringify(movies))
